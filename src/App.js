@@ -6,7 +6,7 @@ import WrongLetters from './components/WrongLetters';
 import Word from './components/Word';
 import Notification from './components/Notification';
 import Popup from './components/Popup';
-import {ShowNotification as show} from './helpers/helpers';
+import {showNotification as show, checkWin} from './helpers/helpers';
 
 const words = ['application', 'programming', 'interface', 'wizard'];
 let selectedWord = words[Math.floor(Math.random() * words.length)];
@@ -61,7 +61,7 @@ function App() {
         <Word selectedWord={selectedWord} correctLetters={correctLetters} />
       </div>
         <Popup correctLetters={correctLetters} wrongLetters={wrongLetters} selectedWord={selectedWord} setPlayable={setPlayable} playAgain={playAgain} />
-        <Notification ShowNotification={showNotification} />
+        <Notification showNotification={showNotification} />
     </>
   );
 }

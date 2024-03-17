@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect } from 'react';
 import { checkWin } from '../helpers/helpers';
 
 const Popup = ({ correctLetters, wrongLetters, selectedWord, setPlayable, playAgain}) => {
@@ -17,7 +17,7 @@ const Popup = ({ correctLetters, wrongLetters, selectedWord, setPlayable, playAg
 
     useEffect(() => {
         setPlayable(playable);
-    })
+    });
 
     return (
         <div className="popup-container" style={finalMessage !== '' ? {display:'flex'} : {}}>
